@@ -1,98 +1,68 @@
-<div align="center">
-
-<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/1/263544521-7b0f6e6d-5a8d-4a1d-8f3e-5d1d6e1f1a1d.png" width="120" />
-
 # ✦ GitMan ✦
-### The Next-Gen GitHub Intelligence Explorer
-**AI-Powered • Client-Side • Ultra-Premium UI**
 
-[![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com)
-[![Framer Motion](https://img.shields.io/badge/Framer-Motion-0055FF?style=for-the-badge&logo=framer)](https://framer.com/motion)
-[![Google Gemini](https://img.shields.io/badge/Google-Gemini-8E75C2?style=for-the-badge&logo=google-gemini)](https://deepmind.google/technologies/gemini/)
+### The Ultimate GitHub Intelligence Explorer
+**AI-Augmented • Zero-Backend • 100% Client-Side • Ultra-Premium UI**
 
-[Explore the App](#-quick-start) • [Features](#-features) • [Deploy](#-deploy-to-vercel)
-
-</div>
+GitMan is a high-performance GitHub intelligence engine built with the speed of **Next.js 14**, the design precision of **Stripe & Linear**, and the analytical power of **Google Gemini AI**. Explore any GitHub profile or repository with deep metrics, animated visualizations, and AI-generated technical audits.
 
 ---
 
-## ✦ Intelligence Beyond Static Data
+## ⚡ Key Intelligence Features
 
-GitMan isn't just a GitHub viewer; it's an **Intelligence Engine**. By integrating **Google Gemini 1.5 Flash**, we transform raw GitHub JSON into meaningful, human-readable insights in real-time.
-
-### 🤖 AI-Powered Features
-- **✦ Profile Intelligence**: A 3-sentence objective summary of a developer's career, specialization, and impact across all their projects.
-- **✦ Tech Personality**: A creative "personality badge" derived from language distribution (e.g., *"A TypeScript purist with a Python side quest"*).
-- **✦ Lazy Repository Insights**: Real-time, strictly factual one-liners for every repo, generated only as you scroll to save API credits.
-- **✦ Work Pattern Analysis**: Objective descriptions of recent contribution rhythms and community engagement.
-
----
-
-## ✨ Core Features
-
-- 🔍 **Global Search** — Instant access to any user or repository on GitHub.
-- 👤 **Supercharged Profiles** — Animated avatars, bio, location, orgs, and hireable status.
-- 📦 **Deep Repo Analytics** — Stars, forks, issues, contributors, commits, and full README rendering.
-- 📊 **Contribution Heatmap** — 52-week activity calendar with interactive daily stats.
-- 🌐 **Skill Mapping** — Animated language distribution bars and skill pills.
-- ⚡ **Activity Timeline** — Real-time parsed public events feed with event-specific icons.
-- 📌 **3D Pinned Items** — High-performance 3D hover tilt cards for pinned repositories.
-- 🆚 **Compare Mode** — Side-by-side technical comparison between two developers.
-- 🎨 **Premium Aesthetics** — Dark mode by default, mesh gradients, particles, and glassmorphism.
+- 🤖 **AI Technical Auditor** — Real-time project analysis and developer summaries powered by Gemini 1.5 Flash.
+- 👤 **Supercharged Profiles** — Deep-dive into any user with animated avatars, bio intelligence, and org tracking.
+- 📦 **Deep Repo Analytics** — Live-fetched stars, forks, contributors, commit timelines, and full README rendering.
+- 📊 **Activity Visualizer** — 52-week interactive contribution heatmaps and automated language distribution mapping.
+- 📌 **3D Hover States** — Premium 3D tilt effects for pinned repositories and high-impact data cards.
+- 🆚 **Side-by-Side Comparison** — Full technical VS mode to compare developers across all public metrics.
+- 🎨 **Visual Excellence** — Responsive dark-theme, moving mesh gradients, particle fields, and Geist typography.
 
 ---
 
 ## 🚀 Quick Start
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/Srv532/gitman.git
+1. **Clone & Install**
+   ```bash
+   git clone https://github.com/Srv532/gitman.git
+   cd gitman
+   npm install
+   ```
 
-# 2. Install dependencies
-cd gitman
-npm install
+2. **Configure Environment**
+   Create a `.env.local` file in the root:
+   ```env
+   NEXT_PUBLIC_GITHUB_TOKEN=your_github_pat_here
+   NEXT_PUBLIC_GEMINI_API_KEY=your_gemini_api_key_here
+   ```
+   *Note: Without a GitHub token, you will be limited to 60 requests per hour. A PAT increases this to 5,000.*
 
-# 3. Configure Environment
-cp .env.local.example .env.local 
-# Add your NEXT_PUBLIC_GITHUB_TOKEN and NEXT_PUBLIC_GEMINI_API_KEY
-```
-
----
-
-## 🔑 Required API Keys
-
-To unlock the full potential of GitMan, you need two keys:
-
-| Key | Purpose | Required? |
-|---|---|---|
-| `NEXT_PUBLIC_GITHUB_TOKEN` | Higher rate limits (5k/hr) & GraphQL Access | **Highly Recommended** |
-| `NEXT_PUBLIC_GEMINI_API_KEY` | Powers AI Summaries & Insights | **Required for AI features** |
+3. **Run Dev Server**
+   ```bash
+   npm run dev
+   ```
 
 ---
 
 ## 🌐 Deploy to Vercel
 
-The easiest way to deploy your own instance:
+Build and deploy your own instance of GitMan in under a minute:
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FSrv532%2Fgitman)
 
-**Important**: Ensure you add the environment variables in the Vercel Dashboard after deployment.
+**Important**: Ensure you add `NEXT_PUBLIC_GITHUB_TOKEN` and `NEXT_PUBLIC_GEMINI_API_KEY` in the Vercel Dashboard -> Settings -> Environment Variables.
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Performance Tech Stack
 
-- **Framework**: [Next.js 14](https://nextjs.org/) (App Router)
+- **Framework**: [Next.js 14](https://nextjs.org/) (App Router & TS)
+- **Design**: [Tailwind CSS](https://tailwindcss.com/) + [Framer Motion](https://framer.com/motion)
+- **3D**: [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) + [Three.js](https://threejs.org/)
+- **Visuals**: [tsParticles](https://particles.js.org/) (Neural Background)
 - **AI**: [Google Gemini 1.5 Flash](https://ai.google.com/build/generative-ai)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **3D/Graphics**: [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) + [tsParticles](https://particles.js.org/)
-- **Type Safety**: [TypeScript](https://www.typescriptlang.org/)
-- **Data**: [GitHub REST](https://docs.github.com/en/rest) & [GraphQL API](https://docs.github.com/en/graphql)
+- **Charts**: [Recharts](https://recharts.org/) & [Nivo](https://nivo.rocks/)
+- **Data**: [GitHub REST v3](https://docs.github.com/en/rest) & [GraphQL v4](https://docs.github.com/en/graphql)
 
 ---
 
-<div align="center">
-Built with ❤️ for the Open Source Community.
-</div>
+Built for developers who value performance and aesthetics. No database, no tracking, just pure GitHub intelligence.
