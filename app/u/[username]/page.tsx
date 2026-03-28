@@ -12,7 +12,6 @@ import { ContributionHeatmap } from "@/components/profile/contribution-heatmap"
 import { LanguageDistribution } from "@/components/profile/language-distribution"
 import { RepoGrid } from "@/components/profile/repo-grid"
 import { ActivityFeed } from "@/components/profile/activity-feed"
-import { AISummaryCard } from "@/components/ai-summary-card"
 import { 
   fetchUserProfile, fetchUserRepos, fetchUserOrgs, fetchUserFollowers, 
   fetchUserEvents, fetchContributionCalendar 
@@ -106,21 +105,6 @@ export default function UserProfilePage() {
         >
           {/* Header Card */}
           <ProfileHeader profile={profile} orgs={orgs} followers={followers} />
-
-          {/* AI Developer Summary */}
-          {profile && repos.length >= 0 && (
-            <AISummaryCard 
-              profileData={{
-                profile,
-                topRepos: repos.slice(0, 10),
-                languages: repos.reduce((acc, r) => {
-                  if (r.language) acc[r.language] = (acc[r.language] || 0) + 1;
-                  return acc;
-                }, {} as any),
-                totalStars: repos.reduce((sum, r) => sum + (r.stargazers_count || 0), 0)
-              }} 
-            />
-          )}
 
           {/* Pinned Repos (if any via GraphQL) */}
           {contributions?.user?.pinnedItems?.nodes?.length > 0 && (
